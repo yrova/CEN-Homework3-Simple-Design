@@ -7,11 +7,24 @@ import com.yrova.app.employee.EmployeeRegister;
 import com.yrova.app.employee.ZooKeeper;
 import com.yrova.app.employee.duties.AnimalTask;
 import com.yrova.app.employee.duties.OtherTask;
+import com.yrova.app.ui.TextUserInterface;
+
+import java.util.Scanner;
 
 public class AppApplication {
 
     public static void main(String[] args) {
 
+        Scanner reader = new Scanner(System.in);
+
+        //Create registers to hold employee/animal objects created by the user
+        AnimalRegister animalRegister = new AnimalRegister();
+        EmployeeRegister employeeRegister = new EmployeeRegister();
+
+        //Start user interface
+        TextUserInterface ui = new TextUserInterface(reader, employeeRegister, animalRegister);
+        ui.start();
+/*
         //Instantiating all of the objects for testing
         final ZooKeeper zooKeeper1 = new ZooKeeper("Danny", "Devito", "12323", "321 Ocean Lane", 8453);
         final ZooKeeper zooKeeper2 = new ZooKeeper("Sigourney", "Weaver", "2343", "3 Ave", 34234);
@@ -54,5 +67,7 @@ public class AppApplication {
         //print all employee/animal info
         employeeRegister.printAllEmployees();
         animalRegister.printAllAnimalsWithInfo();
+        */
     }
+
 }

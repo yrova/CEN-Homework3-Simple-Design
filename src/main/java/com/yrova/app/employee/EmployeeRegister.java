@@ -20,5 +20,9 @@ public class EmployeeRegister {
             x.printEmployeeInfo();
             System.out.println();
         }
+
+        if(this.employeeRegister.isEmpty()){
+            System.out.println("No Employees added");
+        }
     }
 }

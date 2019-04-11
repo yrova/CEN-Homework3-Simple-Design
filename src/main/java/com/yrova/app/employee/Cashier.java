@@ -5,6 +5,7 @@ import com.yrova.app.employee.duties.Task;
 import java.util.LinkedList;
 import java.util.Queue;
 
+//TODO: Change queue to something else
 public class Cashier extends Employee {
 
     private double salary;
